@@ -32,7 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.personaSlotInput = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.processDetachButton = new System.Windows.Forms.Button();
             this.processAttachButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -98,7 +97,6 @@
             // 
             this.groupBox1.Controls.Add(this.personaSlotInput);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.processDetachButton);
             this.groupBox1.Controls.Add(this.processAttachButton);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -139,21 +137,11 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Persona Slot";
             // 
-            // processDetachButton
-            // 
-            this.processDetachButton.Location = new System.Drawing.Point(167, 13);
-            this.processDetachButton.Name = "processDetachButton";
-            this.processDetachButton.Size = new System.Drawing.Size(125, 36);
-            this.processDetachButton.TabIndex = 2;
-            this.processDetachButton.Text = "Detach Process";
-            this.processDetachButton.UseVisualStyleBackColor = true;
-            this.processDetachButton.Click += new System.EventHandler(this.processDetachButton_Click);
-            // 
             // processAttachButton
             // 
             this.processAttachButton.Location = new System.Drawing.Point(6, 13);
             this.processAttachButton.Name = "processAttachButton";
-            this.processAttachButton.Size = new System.Drawing.Size(155, 36);
+            this.processAttachButton.Size = new System.Drawing.Size(285, 36);
             this.processAttachButton.TabIndex = 1;
             this.processAttachButton.Text = "Attach to PCSX2 Process";
             this.processAttachButton.UseVisualStyleBackColor = true;
@@ -348,6 +336,7 @@
             this.skillGetButton.TabIndex = 72;
             this.skillGetButton.Text = "Get Bytes";
             this.skillGetButton.UseVisualStyleBackColor = true;
+            this.skillGetButton.Click += new System.EventHandler(this.skillGetButton_Click);
             // 
             // skillSetButton
             // 
@@ -357,6 +346,7 @@
             this.skillSetButton.TabIndex = 71;
             this.skillSetButton.Text = "Set Bytes";
             this.skillSetButton.UseVisualStyleBackColor = true;
+            this.skillSetButton.Click += new System.EventHandler(this.skillSetButton_Click);
             // 
             // label9
             // 
@@ -372,6 +362,11 @@
             this.luInput.Location = new System.Drawing.Point(8, 213);
             this.luInput.Maximum = new decimal(new int[] {
             99,
+            0,
+            0,
+            0});
+            this.luInput.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -392,6 +387,7 @@
             this.luGetButton.TabIndex = 68;
             this.luGetButton.Text = "Get Bytes";
             this.luGetButton.UseVisualStyleBackColor = true;
+            this.luGetButton.Click += new System.EventHandler(this.luGetButton_Click);
             // 
             // luSetButton
             // 
@@ -401,6 +397,7 @@
             this.luSetButton.TabIndex = 67;
             this.luSetButton.Text = "Set Bytes";
             this.luSetButton.UseVisualStyleBackColor = true;
+            this.luSetButton.Click += new System.EventHandler(this.luSetButton_Click);
             // 
             // label8
             // 
@@ -416,6 +413,11 @@
             this.agInput.Location = new System.Drawing.Point(290, 116);
             this.agInput.Maximum = new decimal(new int[] {
             99,
+            0,
+            0,
+            0});
+            this.agInput.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -436,6 +438,7 @@
             this.agGetButton.TabIndex = 64;
             this.agGetButton.Text = "Get Bytes";
             this.agGetButton.UseVisualStyleBackColor = true;
+            this.agGetButton.Click += new System.EventHandler(this.agGetButton_Click);
             // 
             // agSetButton
             // 
@@ -445,6 +448,7 @@
             this.agSetButton.TabIndex = 63;
             this.agSetButton.Text = "Set Bytes";
             this.agSetButton.UseVisualStyleBackColor = true;
+            this.agSetButton.Click += new System.EventHandler(this.agSetButton_Click);
             // 
             // label7
             // 
@@ -460,6 +464,11 @@
             this.enInput.Location = new System.Drawing.Point(219, 116);
             this.enInput.Maximum = new decimal(new int[] {
             99,
+            0,
+            0,
+            0});
+            this.enInput.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -480,6 +489,7 @@
             this.enGetButton.TabIndex = 60;
             this.enGetButton.Text = "Get Bytes";
             this.enGetButton.UseVisualStyleBackColor = true;
+            this.enGetButton.Click += new System.EventHandler(this.enGetButton_Click);
             // 
             // enSetButton
             // 
@@ -489,6 +499,7 @@
             this.enSetButton.TabIndex = 59;
             this.enSetButton.Text = "Set Bytes";
             this.enSetButton.UseVisualStyleBackColor = true;
+            this.enSetButton.Click += new System.EventHandler(this.enSetButton_Click);
             // 
             // label6
             // 
@@ -504,6 +515,11 @@
             this.maInput.Location = new System.Drawing.Point(148, 116);
             this.maInput.Maximum = new decimal(new int[] {
             99,
+            0,
+            0,
+            0});
+            this.maInput.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -524,6 +540,7 @@
             this.maGetButton.TabIndex = 56;
             this.maGetButton.Text = "Get Bytes";
             this.maGetButton.UseVisualStyleBackColor = true;
+            this.maGetButton.Click += new System.EventHandler(this.maGetButton_Click);
             // 
             // maSetButton
             // 
@@ -533,6 +550,7 @@
             this.maSetButton.TabIndex = 55;
             this.maSetButton.Text = "Set Bytes";
             this.maSetButton.UseVisualStyleBackColor = true;
+            this.maSetButton.Click += new System.EventHandler(this.maSetButton_Click);
             // 
             // label5
             // 
@@ -548,6 +566,11 @@
             this.stInput.Location = new System.Drawing.Point(77, 116);
             this.stInput.Maximum = new decimal(new int[] {
             99,
+            0,
+            0,
+            0});
+            this.stInput.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -568,6 +591,7 @@
             this.stGetButton.TabIndex = 52;
             this.stGetButton.Text = "Get Bytes";
             this.stGetButton.UseVisualStyleBackColor = true;
+            this.stGetButton.Click += new System.EventHandler(this.stGetButton_Click);
             // 
             // stSetButton
             // 
@@ -577,6 +601,7 @@
             this.stSetButton.TabIndex = 51;
             this.stSetButton.Text = "Set Bytes";
             this.stSetButton.UseVisualStyleBackColor = true;
+            this.stSetButton.Click += new System.EventHandler(this.stSetButton_Click);
             // 
             // label4
             // 
@@ -592,6 +617,11 @@
             this.levelInput.Location = new System.Drawing.Point(6, 116);
             this.levelInput.Maximum = new decimal(new int[] {
             99,
+            0,
+            0,
+            0});
+            this.levelInput.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -612,6 +642,7 @@
             this.levelGetButton.TabIndex = 48;
             this.levelGetButton.Text = "Get Bytes";
             this.levelGetButton.UseVisualStyleBackColor = true;
+            this.levelGetButton.Click += new System.EventHandler(this.levelGetButton_Click);
             // 
             // levelSetButton
             // 
@@ -621,6 +652,7 @@
             this.levelSetButton.TabIndex = 47;
             this.levelSetButton.Text = "Set Bytes";
             this.levelSetButton.UseVisualStyleBackColor = true;
+            this.levelSetButton.Click += new System.EventHandler(this.levelSetButton_Click);
             // 
             // label3
             // 
@@ -717,7 +749,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button processDetachButton;
         private System.Windows.Forms.Button processAttachButton;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
