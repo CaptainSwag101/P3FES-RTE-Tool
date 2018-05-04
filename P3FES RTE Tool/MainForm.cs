@@ -16,6 +16,7 @@ namespace P3FES_RTE_Tool
         public static int personaSlot = 1;
         public static Mem MemLib = new Mem();
         private static int gameProcId;
+        private static ToolStripStatusLabel statusLabel;
 
         public MainForm()
         {
@@ -24,7 +25,7 @@ namespace P3FES_RTE_Tool
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            statusLabel = toolStripStatusLabel1;
         }
 
         private void processAttachButton_Click(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace P3FES_RTE_Tool
             {
                 MemLib.OpenProcess(gameProcId.ToString());
                 MessageBox.Show("Successfully attached to PCSX2!\nProc. ID: " + gameProcId.ToString(), "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
                 personaSlotInput.Enabled = true;
                 tabControl1.Enabled = true;
@@ -47,7 +49,6 @@ namespace P3FES_RTE_Tool
             personaSlot = (int)personaSlotInput.Value;
         }
 
-        //Set Persona Bytes button
         private void personaSetButton_Click(object sender, EventArgs e)
         {
             byte[] personaBytes = Addresses.StringToByteArray(personaInput.Text);
@@ -59,6 +60,8 @@ namespace P3FES_RTE_Tool
                 bool result = Addresses.SetPersonaBytes(personaSlot, personaBytes);
                 if (!result)
                     MessageBox.Show("Could not set persona bytes!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    statusLabel.Text = "Persona set to " + Addresses.ByteArrayToString(personaBytes);
             }
             else
                 MessageBox.Show("Please enter a valid hex string!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -88,6 +91,8 @@ namespace P3FES_RTE_Tool
                 bool result = Addresses.SetPersonaSkillBytes(personaSlot, (int)skillSlot.Value, skillBytes);
                 if (!result)
                     MessageBox.Show("Could not set persona skill!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    statusLabel.Text = "Skill set to " + Addresses.ByteArrayToString(skillBytes);
             }
             else
                 MessageBox.Show("Please enter a valid hex string!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -116,6 +121,8 @@ namespace P3FES_RTE_Tool
             bool result = Addresses.SetPersonaLevel(personaSlot, (int)levelInput.Value);
             if (!result)
                 MessageBox.Show("Could not set persona level!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                statusLabel.Text = "Persona level set to " + levelInput.Value;
         }
 
         private void stSetButton_Click(object sender, EventArgs e)
@@ -123,6 +130,8 @@ namespace P3FES_RTE_Tool
             bool result = Addresses.SetPersonaStat(personaSlot, Addresses.PersonaStat.Strength, (int)stInput.Value);
             if (!result)
                 MessageBox.Show("Could not set persona strength!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                statusLabel.Text = "Persona strength set to " + stInput.Value;
         }
 
         private void stGetButton_Click(object sender, EventArgs e)
@@ -141,6 +150,8 @@ namespace P3FES_RTE_Tool
             bool result = Addresses.SetPersonaStat(personaSlot, Addresses.PersonaStat.Magic, (int)maInput.Value);
             if (!result)
                 MessageBox.Show("Could not set persona magic!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                statusLabel.Text = "Persona magic set to " + maInput.Value;
         }
 
         private void maGetButton_Click(object sender, EventArgs e)
@@ -160,6 +171,8 @@ namespace P3FES_RTE_Tool
             bool result = Addresses.SetPersonaStat(personaSlot, Addresses.PersonaStat.Endurance, (int)enInput.Value);
             if (!result)
                 MessageBox.Show("Could not set persona endurance!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                statusLabel.Text = "Persona endurance set to " + enInput.Value;
         }
 
         private void enGetButton_Click(object sender, EventArgs e)
@@ -179,6 +192,8 @@ namespace P3FES_RTE_Tool
             bool result = Addresses.SetPersonaStat(personaSlot, Addresses.PersonaStat.Agility, (int)agInput.Value);
             if (!result)
                 MessageBox.Show("Could not set persona agility!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                statusLabel.Text = "Persona agility set to " + agInput.Value;
         }
 
         private void agGetButton_Click(object sender, EventArgs e)
@@ -197,6 +212,8 @@ namespace P3FES_RTE_Tool
             bool result = Addresses.SetPersonaStat(personaSlot, Addresses.PersonaStat.Luck, (int)luInput.Value);
             if (!result)
                 MessageBox.Show("Could not set persona luck!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                statusLabel.Text = "Persona luck set to " + luInput.Value;
         }
 
         private void luGetButton_Click(object sender, EventArgs e)

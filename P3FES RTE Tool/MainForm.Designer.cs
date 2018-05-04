@@ -37,12 +37,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.personaSkillsOutput = new System.Windows.Forms.RichTextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.getAllStatsButton = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.maxStatsButton = new System.Windows.Forms.Button();
             this.skillSearchButton = new System.Windows.Forms.Button();
             this.personaSearchButton = new System.Windows.Forms.Button();
             this.skillInput = new System.Windows.Forms.TextBox();
@@ -100,14 +94,14 @@
             this.groupBox1.Controls.Add(this.processAttachButton);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(370, 56);
+            this.groupBox1.Size = new System.Drawing.Size(325, 56);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // personaSlotInput
             // 
             this.personaSlotInput.Enabled = false;
-            this.personaSlotInput.Location = new System.Drawing.Point(300, 29);
+            this.personaSlotInput.Location = new System.Drawing.Point(255, 30);
             this.personaSlotInput.Maximum = new decimal(new int[] {
             12,
             0,
@@ -131,7 +125,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(297, 13);
+            this.label1.Location = new System.Drawing.Point(252, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 3;
@@ -139,9 +133,9 @@
             // 
             // processAttachButton
             // 
-            this.processAttachButton.Location = new System.Drawing.Point(6, 13);
+            this.processAttachButton.Location = new System.Drawing.Point(12, 14);
             this.processAttachButton.Name = "processAttachButton";
-            this.processAttachButton.Size = new System.Drawing.Size(285, 36);
+            this.processAttachButton.Size = new System.Drawing.Size(234, 36);
             this.processAttachButton.TabIndex = 1;
             this.processAttachButton.Text = "Attach to PCSX2 Process";
             this.processAttachButton.UseVisualStyleBackColor = true;
@@ -153,9 +147,8 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 412);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(394, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(349, 22);
             this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
@@ -171,17 +164,11 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 74);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(370, 325);
+            this.tabControl1.Size = new System.Drawing.Size(325, 325);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.personaSkillsOutput);
-            this.tabPage1.Controls.Add(this.label18);
-            this.tabPage1.Controls.Add(this.label17);
-            this.tabPage1.Controls.Add(this.getAllStatsButton);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.maxStatsButton);
             this.tabPage1.Controls.Add(this.skillSearchButton);
             this.tabPage1.Controls.Add(this.personaSearchButton);
             this.tabPage1.Controls.Add(this.skillInput);
@@ -220,95 +207,42 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(362, 299);
+            this.tabPage1.Size = new System.Drawing.Size(317, 299);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Personas";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // personaSkillsOutput
-            // 
-            this.personaSkillsOutput.Location = new System.Drawing.Point(148, 213);
-            this.personaSkillsOutput.Name = "personaSkillsOutput";
-            this.personaSkillsOutput.Size = new System.Drawing.Size(207, 78);
-            this.personaSkillsOutput.TabIndex = 82;
-            this.personaSkillsOutput.Text = "";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(145, 197);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(108, 13);
-            this.label18.TabIndex = 81;
-            this.label18.Text = "Persona Skills Output";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(74, 252);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 13);
-            this.label17.TabIndex = 80;
-            this.label17.Text = "Get All Stats";
-            // 
-            // getAllStatsButton
-            // 
-            this.getAllStatsButton.Location = new System.Drawing.Point(77, 268);
-            this.getAllStatsButton.Name = "getAllStatsButton";
-            this.getAllStatsButton.Size = new System.Drawing.Size(65, 23);
-            this.getAllStatsButton.TabIndex = 79;
-            this.getAllStatsButton.Text = "Get Stats";
-            this.getAllStatsButton.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(74, 197);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 13);
-            this.label11.TabIndex = 78;
-            this.label11.Text = "Max All Stats";
-            // 
-            // maxStatsButton
-            // 
-            this.maxStatsButton.Location = new System.Drawing.Point(77, 213);
-            this.maxStatsButton.Name = "maxStatsButton";
-            this.maxStatsButton.Size = new System.Drawing.Size(65, 23);
-            this.maxStatsButton.TabIndex = 77;
-            this.maxStatsButton.Text = "Set Stats";
-            this.maxStatsButton.UseVisualStyleBackColor = true;
-            // 
             // skillSearchButton
             // 
-            this.skillSearchButton.Location = new System.Drawing.Point(290, 6);
+            this.skillSearchButton.Location = new System.Drawing.Point(188, 46);
             this.skillSearchButton.Name = "skillSearchButton";
-            this.skillSearchButton.Size = new System.Drawing.Size(65, 94);
+            this.skillSearchButton.Size = new System.Drawing.Size(55, 51);
             this.skillSearchButton.TabIndex = 76;
-            this.skillSearchButton.Text = "Search For Skill From List";
+            this.skillSearchButton.Text = "Search For Skill";
             this.skillSearchButton.UseVisualStyleBackColor = true;
             // 
             // personaSearchButton
             // 
-            this.personaSearchButton.Location = new System.Drawing.Point(77, 3);
+            this.personaSearchButton.Location = new System.Drawing.Point(66, 3);
             this.personaSearchButton.Name = "personaSearchButton";
-            this.personaSearchButton.Size = new System.Drawing.Size(65, 94);
+            this.personaSearchButton.Size = new System.Drawing.Size(55, 94);
             this.personaSearchButton.TabIndex = 75;
-            this.personaSearchButton.Text = "Search For Persona From List";
+            this.personaSearchButton.Text = "Search For Persona";
             this.personaSearchButton.UseVisualStyleBackColor = true;
             // 
             // skillInput
             // 
             this.skillInput.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.skillInput.Location = new System.Drawing.Point(219, 19);
+            this.skillInput.Location = new System.Drawing.Point(188, 19);
             this.skillInput.MaxLength = 4;
             this.skillInput.Name = "skillInput";
-            this.skillInput.Size = new System.Drawing.Size(65, 20);
+            this.skillInput.Size = new System.Drawing.Size(55, 20);
             this.skillInput.TabIndex = 74;
             this.skillInput.Text = "XXXX";
             // 
             // skillSlot
             // 
-            this.skillSlot.Location = new System.Drawing.Point(148, 19);
+            this.skillSlot.Location = new System.Drawing.Point(127, 19);
             this.skillSlot.Maximum = new decimal(new int[] {
             8,
             0,
@@ -320,7 +254,7 @@
             0,
             0});
             this.skillSlot.Name = "skillSlot";
-            this.skillSlot.Size = new System.Drawing.Size(65, 20);
+            this.skillSlot.Size = new System.Drawing.Size(55, 20);
             this.skillSlot.TabIndex = 73;
             this.skillSlot.Value = new decimal(new int[] {
             1,
@@ -330,9 +264,9 @@
             // 
             // skillGetButton
             // 
-            this.skillGetButton.Location = new System.Drawing.Point(148, 74);
+            this.skillGetButton.Location = new System.Drawing.Point(127, 74);
             this.skillGetButton.Name = "skillGetButton";
-            this.skillGetButton.Size = new System.Drawing.Size(136, 23);
+            this.skillGetButton.Size = new System.Drawing.Size(55, 23);
             this.skillGetButton.TabIndex = 72;
             this.skillGetButton.Text = "Get Bytes";
             this.skillGetButton.UseVisualStyleBackColor = true;
@@ -340,9 +274,9 @@
             // 
             // skillSetButton
             // 
-            this.skillSetButton.Location = new System.Drawing.Point(148, 45);
+            this.skillSetButton.Location = new System.Drawing.Point(127, 45);
             this.skillSetButton.Name = "skillSetButton";
-            this.skillSetButton.Size = new System.Drawing.Size(136, 23);
+            this.skillSetButton.Size = new System.Drawing.Size(55, 23);
             this.skillSetButton.TabIndex = 71;
             this.skillSetButton.Text = "Set Bytes";
             this.skillSetButton.UseVisualStyleBackColor = true;
@@ -351,7 +285,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(145, 3);
+            this.label9.Location = new System.Drawing.Point(124, 3);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(26, 13);
             this.label9.TabIndex = 70;
@@ -359,7 +293,7 @@
             // 
             // luInput
             // 
-            this.luInput.Location = new System.Drawing.Point(8, 213);
+            this.luInput.Location = new System.Drawing.Point(252, 116);
             this.luInput.Maximum = new decimal(new int[] {
             99,
             0,
@@ -371,7 +305,7 @@
             0,
             0});
             this.luInput.Name = "luInput";
-            this.luInput.Size = new System.Drawing.Size(65, 20);
+            this.luInput.Size = new System.Drawing.Size(55, 20);
             this.luInput.TabIndex = 69;
             this.luInput.Value = new decimal(new int[] {
             1,
@@ -381,9 +315,9 @@
             // 
             // luGetButton
             // 
-            this.luGetButton.Location = new System.Drawing.Point(8, 268);
+            this.luGetButton.Location = new System.Drawing.Point(252, 171);
             this.luGetButton.Name = "luGetButton";
-            this.luGetButton.Size = new System.Drawing.Size(65, 23);
+            this.luGetButton.Size = new System.Drawing.Size(55, 23);
             this.luGetButton.TabIndex = 68;
             this.luGetButton.Text = "Get Bytes";
             this.luGetButton.UseVisualStyleBackColor = true;
@@ -391,9 +325,9 @@
             // 
             // luSetButton
             // 
-            this.luSetButton.Location = new System.Drawing.Point(8, 239);
+            this.luSetButton.Location = new System.Drawing.Point(252, 142);
             this.luSetButton.Name = "luSetButton";
-            this.luSetButton.Size = new System.Drawing.Size(65, 23);
+            this.luSetButton.Size = new System.Drawing.Size(55, 23);
             this.luSetButton.TabIndex = 67;
             this.luSetButton.Text = "Set Bytes";
             this.luSetButton.UseVisualStyleBackColor = true;
@@ -402,7 +336,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 197);
+            this.label8.Location = new System.Drawing.Point(249, 100);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 66;
@@ -410,7 +344,7 @@
             // 
             // agInput
             // 
-            this.agInput.Location = new System.Drawing.Point(290, 116);
+            this.agInput.Location = new System.Drawing.Point(191, 116);
             this.agInput.Maximum = new decimal(new int[] {
             99,
             0,
@@ -422,7 +356,7 @@
             0,
             0});
             this.agInput.Name = "agInput";
-            this.agInput.Size = new System.Drawing.Size(65, 20);
+            this.agInput.Size = new System.Drawing.Size(55, 20);
             this.agInput.TabIndex = 65;
             this.agInput.Value = new decimal(new int[] {
             1,
@@ -432,9 +366,9 @@
             // 
             // agGetButton
             // 
-            this.agGetButton.Location = new System.Drawing.Point(290, 171);
+            this.agGetButton.Location = new System.Drawing.Point(191, 171);
             this.agGetButton.Name = "agGetButton";
-            this.agGetButton.Size = new System.Drawing.Size(65, 23);
+            this.agGetButton.Size = new System.Drawing.Size(55, 23);
             this.agGetButton.TabIndex = 64;
             this.agGetButton.Text = "Get Bytes";
             this.agGetButton.UseVisualStyleBackColor = true;
@@ -442,9 +376,9 @@
             // 
             // agSetButton
             // 
-            this.agSetButton.Location = new System.Drawing.Point(290, 142);
+            this.agSetButton.Location = new System.Drawing.Point(191, 142);
             this.agSetButton.Name = "agSetButton";
-            this.agSetButton.Size = new System.Drawing.Size(65, 23);
+            this.agSetButton.Size = new System.Drawing.Size(55, 23);
             this.agSetButton.TabIndex = 63;
             this.agSetButton.Text = "Set Bytes";
             this.agSetButton.UseVisualStyleBackColor = true;
@@ -453,7 +387,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(287, 100);
+            this.label7.Location = new System.Drawing.Point(188, 100);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 62;
@@ -461,7 +395,7 @@
             // 
             // enInput
             // 
-            this.enInput.Location = new System.Drawing.Point(219, 116);
+            this.enInput.Location = new System.Drawing.Point(130, 116);
             this.enInput.Maximum = new decimal(new int[] {
             99,
             0,
@@ -473,7 +407,7 @@
             0,
             0});
             this.enInput.Name = "enInput";
-            this.enInput.Size = new System.Drawing.Size(65, 20);
+            this.enInput.Size = new System.Drawing.Size(55, 20);
             this.enInput.TabIndex = 61;
             this.enInput.Value = new decimal(new int[] {
             1,
@@ -483,9 +417,9 @@
             // 
             // enGetButton
             // 
-            this.enGetButton.Location = new System.Drawing.Point(219, 171);
+            this.enGetButton.Location = new System.Drawing.Point(130, 171);
             this.enGetButton.Name = "enGetButton";
-            this.enGetButton.Size = new System.Drawing.Size(65, 23);
+            this.enGetButton.Size = new System.Drawing.Size(55, 23);
             this.enGetButton.TabIndex = 60;
             this.enGetButton.Text = "Get Bytes";
             this.enGetButton.UseVisualStyleBackColor = true;
@@ -493,9 +427,9 @@
             // 
             // enSetButton
             // 
-            this.enSetButton.Location = new System.Drawing.Point(219, 142);
+            this.enSetButton.Location = new System.Drawing.Point(130, 142);
             this.enSetButton.Name = "enSetButton";
-            this.enSetButton.Size = new System.Drawing.Size(65, 23);
+            this.enSetButton.Size = new System.Drawing.Size(55, 23);
             this.enSetButton.TabIndex = 59;
             this.enSetButton.Text = "Set Bytes";
             this.enSetButton.UseVisualStyleBackColor = true;
@@ -504,7 +438,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(216, 100);
+            this.label6.Location = new System.Drawing.Point(127, 100);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 13);
             this.label6.TabIndex = 58;
@@ -512,7 +446,7 @@
             // 
             // maInput
             // 
-            this.maInput.Location = new System.Drawing.Point(148, 116);
+            this.maInput.Location = new System.Drawing.Point(69, 116);
             this.maInput.Maximum = new decimal(new int[] {
             99,
             0,
@@ -524,7 +458,7 @@
             0,
             0});
             this.maInput.Name = "maInput";
-            this.maInput.Size = new System.Drawing.Size(65, 20);
+            this.maInput.Size = new System.Drawing.Size(55, 20);
             this.maInput.TabIndex = 57;
             this.maInput.Value = new decimal(new int[] {
             1,
@@ -534,9 +468,9 @@
             // 
             // maGetButton
             // 
-            this.maGetButton.Location = new System.Drawing.Point(148, 171);
+            this.maGetButton.Location = new System.Drawing.Point(69, 171);
             this.maGetButton.Name = "maGetButton";
-            this.maGetButton.Size = new System.Drawing.Size(65, 23);
+            this.maGetButton.Size = new System.Drawing.Size(55, 23);
             this.maGetButton.TabIndex = 56;
             this.maGetButton.Text = "Get Bytes";
             this.maGetButton.UseVisualStyleBackColor = true;
@@ -544,9 +478,9 @@
             // 
             // maSetButton
             // 
-            this.maSetButton.Location = new System.Drawing.Point(148, 142);
+            this.maSetButton.Location = new System.Drawing.Point(69, 142);
             this.maSetButton.Name = "maSetButton";
-            this.maSetButton.Size = new System.Drawing.Size(65, 23);
+            this.maSetButton.Size = new System.Drawing.Size(55, 23);
             this.maSetButton.TabIndex = 55;
             this.maSetButton.Text = "Set Bytes";
             this.maSetButton.UseVisualStyleBackColor = true;
@@ -555,7 +489,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(145, 100);
+            this.label5.Location = new System.Drawing.Point(66, 100);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 54;
@@ -563,7 +497,7 @@
             // 
             // stInput
             // 
-            this.stInput.Location = new System.Drawing.Point(77, 116);
+            this.stInput.Location = new System.Drawing.Point(8, 116);
             this.stInput.Maximum = new decimal(new int[] {
             99,
             0,
@@ -575,7 +509,7 @@
             0,
             0});
             this.stInput.Name = "stInput";
-            this.stInput.Size = new System.Drawing.Size(65, 20);
+            this.stInput.Size = new System.Drawing.Size(55, 20);
             this.stInput.TabIndex = 53;
             this.stInput.Value = new decimal(new int[] {
             1,
@@ -585,9 +519,9 @@
             // 
             // stGetButton
             // 
-            this.stGetButton.Location = new System.Drawing.Point(77, 171);
+            this.stGetButton.Location = new System.Drawing.Point(8, 171);
             this.stGetButton.Name = "stGetButton";
-            this.stGetButton.Size = new System.Drawing.Size(65, 23);
+            this.stGetButton.Size = new System.Drawing.Size(55, 23);
             this.stGetButton.TabIndex = 52;
             this.stGetButton.Text = "Get Bytes";
             this.stGetButton.UseVisualStyleBackColor = true;
@@ -595,9 +529,9 @@
             // 
             // stSetButton
             // 
-            this.stSetButton.Location = new System.Drawing.Point(77, 142);
+            this.stSetButton.Location = new System.Drawing.Point(8, 142);
             this.stSetButton.Name = "stSetButton";
-            this.stSetButton.Size = new System.Drawing.Size(65, 23);
+            this.stSetButton.Size = new System.Drawing.Size(55, 23);
             this.stSetButton.TabIndex = 51;
             this.stSetButton.Text = "Set Bytes";
             this.stSetButton.UseVisualStyleBackColor = true;
@@ -606,7 +540,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(74, 100);
+            this.label4.Location = new System.Drawing.Point(5, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 50;
@@ -614,7 +548,7 @@
             // 
             // levelInput
             // 
-            this.levelInput.Location = new System.Drawing.Point(6, 116);
+            this.levelInput.Location = new System.Drawing.Point(252, 20);
             this.levelInput.Maximum = new decimal(new int[] {
             99,
             0,
@@ -626,7 +560,7 @@
             0,
             0});
             this.levelInput.Name = "levelInput";
-            this.levelInput.Size = new System.Drawing.Size(65, 20);
+            this.levelInput.Size = new System.Drawing.Size(55, 20);
             this.levelInput.TabIndex = 49;
             this.levelInput.Value = new decimal(new int[] {
             1,
@@ -636,9 +570,9 @@
             // 
             // levelGetButton
             // 
-            this.levelGetButton.Location = new System.Drawing.Point(6, 171);
+            this.levelGetButton.Location = new System.Drawing.Point(252, 75);
             this.levelGetButton.Name = "levelGetButton";
-            this.levelGetButton.Size = new System.Drawing.Size(65, 23);
+            this.levelGetButton.Size = new System.Drawing.Size(55, 23);
             this.levelGetButton.TabIndex = 48;
             this.levelGetButton.Text = "Get Bytes";
             this.levelGetButton.UseVisualStyleBackColor = true;
@@ -646,9 +580,9 @@
             // 
             // levelSetButton
             // 
-            this.levelSetButton.Location = new System.Drawing.Point(6, 142);
+            this.levelSetButton.Location = new System.Drawing.Point(252, 46);
             this.levelSetButton.Name = "levelSetButton";
-            this.levelSetButton.Size = new System.Drawing.Size(65, 23);
+            this.levelSetButton.Size = new System.Drawing.Size(55, 23);
             this.levelSetButton.TabIndex = 47;
             this.levelSetButton.Text = "Set Bytes";
             this.levelSetButton.UseVisualStyleBackColor = true;
@@ -657,7 +591,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 100);
+            this.label3.Location = new System.Drawing.Point(249, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 46;
@@ -667,7 +601,7 @@
             // 
             this.personaGetButton.Location = new System.Drawing.Point(6, 74);
             this.personaGetButton.Name = "personaGetButton";
-            this.personaGetButton.Size = new System.Drawing.Size(65, 23);
+            this.personaGetButton.Size = new System.Drawing.Size(55, 23);
             this.personaGetButton.TabIndex = 45;
             this.personaGetButton.Text = "Get Bytes";
             this.personaGetButton.UseVisualStyleBackColor = true;
@@ -677,7 +611,7 @@
             // 
             this.personaSetButton.Location = new System.Drawing.Point(6, 45);
             this.personaSetButton.Name = "personaSetButton";
-            this.personaSetButton.Size = new System.Drawing.Size(65, 23);
+            this.personaSetButton.Size = new System.Drawing.Size(55, 23);
             this.personaSetButton.TabIndex = 44;
             this.personaSetButton.Text = "Set Bytes";
             this.personaSetButton.UseVisualStyleBackColor = true;
@@ -688,7 +622,7 @@
             this.personaInput.Location = new System.Drawing.Point(6, 19);
             this.personaInput.MaxLength = 4;
             this.personaInput.Name = "personaInput";
-            this.personaInput.Size = new System.Drawing.Size(65, 20);
+            this.personaInput.Size = new System.Drawing.Size(55, 20);
             this.personaInput.TabIndex = 43;
             this.personaInput.Text = "XXXX";
             // 
@@ -706,7 +640,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(362, 299);
+            this.tabPage2.Size = new System.Drawing.Size(317, 299);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Protag.";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -715,7 +649,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 434);
+            this.ClientSize = new System.Drawing.Size(349, 434);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox1);
@@ -751,18 +685,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button processAttachButton;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel notifyLabel;
         private System.Windows.Forms.NumericUpDown personaSlotInput;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.RichTextBox personaSkillsOutput;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button getAllStatsButton;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button maxStatsButton;
         private System.Windows.Forms.Button skillSearchButton;
         private System.Windows.Forms.Button personaSearchButton;
         private System.Windows.Forms.TextBox skillInput;
@@ -798,6 +726,7 @@
         private System.Windows.Forms.Button personaSetButton;
         private System.Windows.Forms.TextBox personaInput;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 
