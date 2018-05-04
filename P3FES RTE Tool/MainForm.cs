@@ -226,5 +226,105 @@ namespace P3FES_RTE_Tool
             else
                 MessageBox.Show("Could not get persona luck!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void mcLevelSetButton_Click(object sender, EventArgs e)
+        {
+            bool result = Addresses.SetMcLevel((int)mcLevelInput.Value);
+            if (!result)
+                MessageBox.Show("Could not set protagonist level!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                statusLabel.Text = "Protagonist level set to " + mcLevelInput.Value;
+        }
+
+        private void mcLevelGetButton_Click(object sender, EventArgs e)
+        {
+            NumericUpDown inputControl = mcLevelInput;
+            int value = Addresses.GetMcLevel();
+
+            if (!(value < inputControl.Minimum) && !(value > inputControl.Maximum))
+                inputControl.Value = value;
+            else
+                MessageBox.Show("Could not get protagonist level!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void mcEquippedPersonaSetButton_Click(object sender, EventArgs e)
+        {
+            bool result = Addresses.SetMcEquippedPersona((int)mcEquippedPersonaInput.Value);
+            if (!result)
+                MessageBox.Show("Could not set protagonist equipped persona!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                statusLabel.Text = "Protagonist equipped persona set to " + mcLevelInput.Value;
+        }
+
+        private void mcEquippedPersonaGetButton_Click(object sender, EventArgs e)
+        {
+            NumericUpDown inputControl = mcEquippedPersonaInput;
+            int value = Addresses.GetMcEquippedPersona();
+
+            if (!(value < inputControl.Minimum) && !(value > inputControl.Maximum))
+                inputControl.Value = value;
+            else
+                MessageBox.Show("Could not get protagonist equipped persona!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void mcSetHpButton_Click(object sender, EventArgs e)
+        {
+            bool result = Addresses.SetMcHp((int)mcHpInput.Value);
+            if (!result)
+                MessageBox.Show("Could not set protagonist HP!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                statusLabel.Text = "Protagonist HP set to " + mcHpInput.Value;
+        }
+
+        private void mcGetHpButton_Click(object sender, EventArgs e)
+        {
+            NumericUpDown inputControl = mcHpInput;
+            int value = Addresses.GetMcHp();
+
+            if (!(value < inputControl.Minimum) && !(value > inputControl.Maximum))
+                inputControl.Value = value;
+            else
+                MessageBox.Show("Could not get protagonist HP!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void mcSetSp_Click(object sender, EventArgs e)
+        {
+            bool result = Addresses.SetMcSp((int)mcSpInput.Value);
+            if (!result)
+                MessageBox.Show("Could not set protagonist SP!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                statusLabel.Text = "Protagonist SP set to " + mcSpInput.Value;
+        }
+
+        private void mcGetSp_Click(object sender, EventArgs e)
+        {
+            NumericUpDown inputControl = mcSpInput;
+            int value = Addresses.GetMcSp();
+
+            if (!(value < inputControl.Minimum) && !(value > inputControl.Maximum))
+                inputControl.Value = value;
+            else
+                MessageBox.Show("Could not get protagonist SP!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void mcMoneySetButton_Click(object sender, EventArgs e)
+        {
+            bool result = Addresses.SetMcMoney((int)mcMoneyInput.Value);
+            if (!result)
+                MessageBox.Show("Could not set protagonist money!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                statusLabel.Text = "Protagonist money set to " + mcMoneyInput.Value;
+        }
+
+        private void mcMoneyGetButton_Click(object sender, EventArgs e)
+        {
+            NumericUpDown inputControl = mcMoneyInput;
+            int value = Addresses.GetMcMoney();
+
+            if (!(value < inputControl.Minimum) && !(value > inputControl.Maximum))
+                inputControl.Value = value;
+            else
+                MessageBox.Show("Could not get protagonist money!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

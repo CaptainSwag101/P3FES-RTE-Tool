@@ -73,6 +73,26 @@
             this.personaInput = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.mcLevelInput = new System.Windows.Forms.NumericUpDown();
+            this.mcLevelGetButton = new System.Windows.Forms.Button();
+            this.mcLevelSetButton = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.mcEquippedPersonaInput = new System.Windows.Forms.NumericUpDown();
+            this.mcEquippedPersonaGetButton = new System.Windows.Forms.Button();
+            this.mcEquippedPersonaSetButton = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.mcHpInput = new System.Windows.Forms.NumericUpDown();
+            this.mcGetHpButton = new System.Windows.Forms.Button();
+            this.mcSetHpButton = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.mcSpInput = new System.Windows.Forms.NumericUpDown();
+            this.mcGetSp = new System.Windows.Forms.Button();
+            this.mcSetSp = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.mcMoneyInput = new System.Windows.Forms.NumericUpDown();
+            this.mcMoneyGetButton = new System.Windows.Forms.Button();
+            this.mcMoneySetButton = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personaSlotInput)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -85,6 +105,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.maInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.levelInput)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mcLevelInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mcEquippedPersonaInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mcHpInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mcSpInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mcMoneyInput)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -637,6 +663,26 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.mcMoneyInput);
+            this.tabPage2.Controls.Add(this.mcMoneyGetButton);
+            this.tabPage2.Controls.Add(this.mcMoneySetButton);
+            this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Controls.Add(this.mcSpInput);
+            this.tabPage2.Controls.Add(this.mcGetSp);
+            this.tabPage2.Controls.Add(this.mcSetSp);
+            this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.mcHpInput);
+            this.tabPage2.Controls.Add(this.mcGetHpButton);
+            this.tabPage2.Controls.Add(this.mcSetHpButton);
+            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.mcEquippedPersonaInput);
+            this.tabPage2.Controls.Add(this.mcEquippedPersonaGetButton);
+            this.tabPage2.Controls.Add(this.mcEquippedPersonaSetButton);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.mcLevelInput);
+            this.tabPage2.Controls.Add(this.mcLevelGetButton);
+            this.tabPage2.Controls.Add(this.mcLevelSetButton);
+            this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -644,6 +690,251 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Protag.";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // mcLevelInput
+            // 
+            this.mcLevelInput.Location = new System.Drawing.Point(6, 19);
+            this.mcLevelInput.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.mcLevelInput.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.mcLevelInput.Name = "mcLevelInput";
+            this.mcLevelInput.Size = new System.Drawing.Size(55, 20);
+            this.mcLevelInput.TabIndex = 73;
+            this.mcLevelInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // mcLevelGetButton
+            // 
+            this.mcLevelGetButton.Location = new System.Drawing.Point(6, 74);
+            this.mcLevelGetButton.Name = "mcLevelGetButton";
+            this.mcLevelGetButton.Size = new System.Drawing.Size(55, 23);
+            this.mcLevelGetButton.TabIndex = 72;
+            this.mcLevelGetButton.Text = "Get Bytes";
+            this.mcLevelGetButton.UseVisualStyleBackColor = true;
+            this.mcLevelGetButton.Click += new System.EventHandler(this.mcLevelGetButton_Click);
+            // 
+            // mcLevelSetButton
+            // 
+            this.mcLevelSetButton.Location = new System.Drawing.Point(6, 45);
+            this.mcLevelSetButton.Name = "mcLevelSetButton";
+            this.mcLevelSetButton.Size = new System.Drawing.Size(55, 23);
+            this.mcLevelSetButton.TabIndex = 71;
+            this.mcLevelSetButton.Text = "Set Bytes";
+            this.mcLevelSetButton.UseVisualStyleBackColor = true;
+            this.mcLevelSetButton.Click += new System.EventHandler(this.mcLevelSetButton_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 3);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.TabIndex = 70;
+            this.label10.Text = "Level";
+            // 
+            // mcEquippedPersonaInput
+            // 
+            this.mcEquippedPersonaInput.Location = new System.Drawing.Point(67, 19);
+            this.mcEquippedPersonaInput.Maximum = new decimal(new int[] {
+            11,
+            0,
+            0,
+            0});
+            this.mcEquippedPersonaInput.Name = "mcEquippedPersonaInput";
+            this.mcEquippedPersonaInput.Size = new System.Drawing.Size(55, 20);
+            this.mcEquippedPersonaInput.TabIndex = 77;
+            // 
+            // mcEquippedPersonaGetButton
+            // 
+            this.mcEquippedPersonaGetButton.Location = new System.Drawing.Point(67, 74);
+            this.mcEquippedPersonaGetButton.Name = "mcEquippedPersonaGetButton";
+            this.mcEquippedPersonaGetButton.Size = new System.Drawing.Size(55, 23);
+            this.mcEquippedPersonaGetButton.TabIndex = 76;
+            this.mcEquippedPersonaGetButton.Text = "Get Bytes";
+            this.mcEquippedPersonaGetButton.UseVisualStyleBackColor = true;
+            this.mcEquippedPersonaGetButton.Click += new System.EventHandler(this.mcEquippedPersonaGetButton_Click);
+            // 
+            // mcEquippedPersonaSetButton
+            // 
+            this.mcEquippedPersonaSetButton.Location = new System.Drawing.Point(67, 45);
+            this.mcEquippedPersonaSetButton.Name = "mcEquippedPersonaSetButton";
+            this.mcEquippedPersonaSetButton.Size = new System.Drawing.Size(55, 23);
+            this.mcEquippedPersonaSetButton.TabIndex = 75;
+            this.mcEquippedPersonaSetButton.Text = "Set Bytes";
+            this.mcEquippedPersonaSetButton.UseVisualStyleBackColor = true;
+            this.mcEquippedPersonaSetButton.Click += new System.EventHandler(this.mcEquippedPersonaSetButton_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(64, 3);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 13);
+            this.label11.TabIndex = 74;
+            this.label11.Text = "Eqq. Prsna";
+            // 
+            // mcHpInput
+            // 
+            this.mcHpInput.Location = new System.Drawing.Point(128, 19);
+            this.mcHpInput.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.mcHpInput.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.mcHpInput.Name = "mcHpInput";
+            this.mcHpInput.Size = new System.Drawing.Size(55, 20);
+            this.mcHpInput.TabIndex = 81;
+            this.mcHpInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // mcGetHpButton
+            // 
+            this.mcGetHpButton.Location = new System.Drawing.Point(128, 74);
+            this.mcGetHpButton.Name = "mcGetHpButton";
+            this.mcGetHpButton.Size = new System.Drawing.Size(55, 23);
+            this.mcGetHpButton.TabIndex = 80;
+            this.mcGetHpButton.Text = "Get Bytes";
+            this.mcGetHpButton.UseVisualStyleBackColor = true;
+            this.mcGetHpButton.Click += new System.EventHandler(this.mcGetHpButton_Click);
+            // 
+            // mcSetHpButton
+            // 
+            this.mcSetHpButton.Location = new System.Drawing.Point(128, 45);
+            this.mcSetHpButton.Name = "mcSetHpButton";
+            this.mcSetHpButton.Size = new System.Drawing.Size(55, 23);
+            this.mcSetHpButton.TabIndex = 79;
+            this.mcSetHpButton.Text = "Set Bytes";
+            this.mcSetHpButton.UseVisualStyleBackColor = true;
+            this.mcSetHpButton.Click += new System.EventHandler(this.mcSetHpButton_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(125, 3);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(22, 13);
+            this.label12.TabIndex = 78;
+            this.label12.Text = "HP";
+            // 
+            // mcSpInput
+            // 
+            this.mcSpInput.Location = new System.Drawing.Point(189, 19);
+            this.mcSpInput.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.mcSpInput.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.mcSpInput.Name = "mcSpInput";
+            this.mcSpInput.Size = new System.Drawing.Size(55, 20);
+            this.mcSpInput.TabIndex = 85;
+            this.mcSpInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // mcGetSp
+            // 
+            this.mcGetSp.Location = new System.Drawing.Point(189, 74);
+            this.mcGetSp.Name = "mcGetSp";
+            this.mcGetSp.Size = new System.Drawing.Size(55, 23);
+            this.mcGetSp.TabIndex = 84;
+            this.mcGetSp.Text = "Get Bytes";
+            this.mcGetSp.UseVisualStyleBackColor = true;
+            this.mcGetSp.Click += new System.EventHandler(this.mcGetSp_Click);
+            // 
+            // mcSetSp
+            // 
+            this.mcSetSp.Location = new System.Drawing.Point(189, 45);
+            this.mcSetSp.Name = "mcSetSp";
+            this.mcSetSp.Size = new System.Drawing.Size(55, 23);
+            this.mcSetSp.TabIndex = 83;
+            this.mcSetSp.Text = "Set Bytes";
+            this.mcSetSp.UseVisualStyleBackColor = true;
+            this.mcSetSp.Click += new System.EventHandler(this.mcSetSp_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(186, 3);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(21, 13);
+            this.label13.TabIndex = 82;
+            this.label13.Text = "SP";
+            // 
+            // mcMoneyInput
+            // 
+            this.mcMoneyInput.Location = new System.Drawing.Point(250, 19);
+            this.mcMoneyInput.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.mcMoneyInput.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.mcMoneyInput.Name = "mcMoneyInput";
+            this.mcMoneyInput.Size = new System.Drawing.Size(55, 20);
+            this.mcMoneyInput.TabIndex = 89;
+            this.mcMoneyInput.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // mcMoneyGetButton
+            // 
+            this.mcMoneyGetButton.Location = new System.Drawing.Point(250, 74);
+            this.mcMoneyGetButton.Name = "mcMoneyGetButton";
+            this.mcMoneyGetButton.Size = new System.Drawing.Size(55, 23);
+            this.mcMoneyGetButton.TabIndex = 88;
+            this.mcMoneyGetButton.Text = "Get Bytes";
+            this.mcMoneyGetButton.UseVisualStyleBackColor = true;
+            this.mcMoneyGetButton.Click += new System.EventHandler(this.mcMoneyGetButton_Click);
+            // 
+            // mcMoneySetButton
+            // 
+            this.mcMoneySetButton.Location = new System.Drawing.Point(250, 45);
+            this.mcMoneySetButton.Name = "mcMoneySetButton";
+            this.mcMoneySetButton.Size = new System.Drawing.Size(55, 23);
+            this.mcMoneySetButton.TabIndex = 87;
+            this.mcMoneySetButton.Text = "Set Bytes";
+            this.mcMoneySetButton.UseVisualStyleBackColor = true;
+            this.mcMoneySetButton.Click += new System.EventHandler(this.mcMoneySetButton_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(247, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(39, 13);
+            this.label14.TabIndex = 86;
+            this.label14.Text = "Money";
             // 
             // MainForm
             // 
@@ -675,6 +966,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.maInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.levelInput)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mcLevelInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mcEquippedPersonaInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mcHpInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mcSpInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mcMoneyInput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -727,6 +1025,26 @@
         private System.Windows.Forms.TextBox personaInput;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.NumericUpDown mcLevelInput;
+        private System.Windows.Forms.Button mcLevelGetButton;
+        private System.Windows.Forms.Button mcLevelSetButton;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown mcEquippedPersonaInput;
+        private System.Windows.Forms.Button mcEquippedPersonaGetButton;
+        private System.Windows.Forms.Button mcEquippedPersonaSetButton;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown mcHpInput;
+        private System.Windows.Forms.Button mcGetHpButton;
+        private System.Windows.Forms.Button mcSetHpButton;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.NumericUpDown mcSpInput;
+        private System.Windows.Forms.Button mcGetSp;
+        private System.Windows.Forms.Button mcSetSp;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown mcMoneyInput;
+        private System.Windows.Forms.Button mcMoneyGetButton;
+        private System.Windows.Forms.Button mcMoneySetButton;
+        private System.Windows.Forms.Label label14;
     }
 }
 

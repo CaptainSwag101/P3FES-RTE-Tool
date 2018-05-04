@@ -11,6 +11,12 @@ namespace P3FES_RTE_Tool
     {
         private static Mem MemLib = MainForm.MemLib;
 
+        private static readonly long mc_level_address = 0x2083622A;
+        private static readonly long mc_equipped_persona_address = 0x20836BA8;
+        private static readonly long mc_current_hp_address = 0x2083622C;
+        private static readonly long mc_current_sp_address = 0x2083622E;
+        private static readonly long mc_money_address = 0x2083A6DC;
+
         public enum PersonaStat
         {
             Strength = 0x01,
@@ -50,6 +56,21 @@ namespace P3FES_RTE_Tool
                 bytesStr = "XXXX";
 
             return bytesStr;
+        }
+
+        //Convert a byte array (ex. 0x00, 0xFF) into a Memory.dll readable format (ex. 0x00 0xFF)
+        public static string ByteArrayToMemlibString(byte[] array)
+        {
+            string memlibString = "";
+            for (int i = 0; i < array.Length; i++)
+            {
+                if(i != array.Length-1)
+                    memlibString = memlibString + "0x" + array[i].ToString("X").PadLeft(2, '0') + " ";
+                else
+                    memlibString = memlibString + "0x" + array[i].ToString("X").PadLeft(2, '0');
+            }
+                
+            return memlibString;
         }
 
         //Retrieve the starting address for a persona
@@ -154,7 +175,80 @@ namespace P3FES_RTE_Tool
         {
             long address = GetPersonaStatAddress(personaSlot, personaStat);
             int value = MemLib.readByte("0x" + address.ToString("X"));
+
             return value;
+        }
+
+        //Set the mc's level
+        public static bool SetMcLevel(int mcLevel)
+        {
+            byte value = Convert.ToByte(mcLevel);
+            return MemLib.writeMemory("0x" + mc_level_address.ToString("X"), "byte", "0x" + value.ToString("X").PadLeft(2, '0'));
+        }
+
+        //Get the mc's level
+        public static int GetMcLevel()
+        {
+            int value = MemLib.readByte("0x" + mc_level_address.ToString("X"));
+            return value;
+        }
+
+        //Set the mc's equipped persona
+        public static bool SetMcEquippedPersona(int mcEquippedPersona)
+        {
+            byte value = Convert.ToByte(mcEquippedPersona);
+            return MemLib.writeMemory("0x" + mc_equipped_persona_address.ToString("X"), "byte", value.ToString("X").PadLeft(2, '0'));
+        }
+
+        //Get the mc's equipped persona
+        public static int GetMcEquippedPersona()
+        {
+            int value = MemLib.readByte("0x" + mc_equipped_persona_address.ToString("X"));
+            return value;
+        }
+
+        //Set the mc's hp
+        public static bool SetMcHp(int mcHp)
+        {
+            byte[] value = BitConverter.GetBytes((short)mcHp);
+            return MemLib.writeMemory("0x" + mc_current_hp_address.ToString("X"), "bytes", ByteArrayToMemlibString(value));
+        }
+
+        //Get the mc's hp
+        public static int GetMcHp()
+        {
+            byte[] hpBytes = MemLib.readBytes("0x" + mc_current_hp_address.ToString("X"), 2);
+            int value = BitConverter.ToInt16(hpBytes, 0);
+
+            return value;
+        }
+
+        //Set the mc's sp
+        public static bool SetMcSp(int mcSp)
+        {
+            byte[] value = BitConverter.GetBytes((short)mcSp);
+            return MemLib.writeMemory("0x" + mc_current_sp_address.ToString("X"), "bytes", ByteArrayToMemlibString(value));
+        }
+
+        //Get the mc's hp
+        public static int GetMcSp()
+        {
+            byte[] spBytes = MemLib.readBytes("0x" + mc_current_sp_address.ToString("X"), 2);
+            int value = BitConverter.ToInt16(spBytes, 0);
+
+            return value;
+        }
+
+        //Set the mc's money
+        public static bool SetMcMoney(int mcMoney)
+        {
+            return MemLib.writeMemory("0x" + mc_money_address.ToString("X"), "int", mcMoney.ToString());
+        }
+
+        //Get the mc's money
+        public static int GetMcMoney()
+        {
+            return MemLib.readInt("0x" + mc_money_address.ToString("X"));
         }
     }
 }
